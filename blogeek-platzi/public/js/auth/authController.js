@@ -1,6 +1,6 @@
 $(() => {    
 
-    //$("#authFB").click(() => );
+    const objAuth = new Autenticacion()    
 
     $("#btnRegistroEmail").click(() => {
         const nombres = $('#nombreContactoReg').val();
@@ -17,7 +17,9 @@ $(() => {
         auth.autEmailPass(email, password);
     });
 
-    //$("#authGoogle").click(() => //AUTH con GOOGLE);
+    $("#authGoogle").click(() => objAuth.authCuentaGoogle());
+
+    $("#authFB").click(() => objAuth.authCuentaFacebook());
 
     //$("#authTwitter").click(() => //AUTH con Twitter);
 
